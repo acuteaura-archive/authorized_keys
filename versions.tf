@@ -11,6 +11,7 @@ terraform {
     region                      = "us-east-1"
     bucket                      = "aura-cfg"
     key                         = "terraform/authorized_keys.tfstate"
+    acl                         = "private"
   }
   required_version = ">= 0.13"
 }
