@@ -17,6 +17,12 @@ locals {
         desc = "T495, in WSL"
       },
       {
+        name = "lesbos"
+        type = "ssh-ed25519"
+        data = "AAAAC3NzaC1lZDI1NTE5AAAAILPLhUqiimAqaX+6SCpZxEC2UosFH4eqQ/yo0Ep+VVXG"
+        desc = "Desktop, in WSL"
+      },
+      {
         name = "iPhone-WorkingCopy",
         type = "ssh-rsa"
         data = "AAAAB3NzaC1yc2EAAAADAQABAAACAQDq/+3fGFDdCRDPC9aGX/kUSycstIRF0y65Dts+zas9cyMOE3+w4v8yhemXcHwXv1viusmWtz6O7a/2B01j4l0d3Nu03MLlR+8nOaX1Vz4fQGJo72yGhrnfzpNSk7T0QHtHX99qnS8PEFJD7wwpRuRtyvfJvhnZ8ox4iG4YUyaalMAJ4cEIocrQtQc/zPiWC0ULQx4SHuFRQClioKJ2hXncrRPm/iVZwRwL+735pOznTdYTZLrcW2HXdz6Cb7cypFNaxkmGT+q3c06Ja+Re2/lq90B8gQ8Bp2naY71oi1jS7LoyurF9yqHQZiQNlObEwcIu+ZaICBZyY6ZYdGPPR2lvKoxCF4S+pihhJTMCvsuBTBlNBd+JbEWSMNrrfJyoS4usBoRR5wTQ+wNhfhJSfU+YDWIgFIxo7irbuqECcUW34nuy9aAuQBa0qTdahS1F9nC9wSzfrkcBe7fGO77YwhRIdCyCAcdSii4SpEkvhQTG9veZxhqVM9t4oZgzjN4cYkkcfHsH91rAT0Gdgq3dwcEYxpLonDfntmBR4fUN35FEbIbfkQZeR1nEbR6eXqdEJT528rF/IfDy2rejuF0F9eHsJ0IJCCla31Ol9ERdW7Do6EMeK8L/Oq7d17IO3i+x+t0SztVgyzCvADn2OS4f8BNaWH/1qy+o1+lnTHcc/n32Yw=="
