@@ -57,8 +57,8 @@ resource "github_user_ssh_key" "authorized_keys" {
 }
 
 resource "hcloud_ssh_key" "authorized_keys" {
- for_each = { for key in local.keyfile_params.keys : key.name => key }
-  name = "${each.value.name} (${each.value.desc})"
+  for_each = { for key in local.keyfile_params.keys : key.name => key }
+  name     = "${each.value.name} (${each.value.desc})"
 
   public_key = "${each.value.type} ${each.value.data}"
 }
