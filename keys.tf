@@ -40,6 +40,14 @@ resource "digitalocean_spaces_bucket_object" "authorized_keys" {
   acl     = "public-read"
 }
 
+resource "digitalocean_spaces_bucket_object" "authorized_keys" {
+  region  = "ams3"
+  bucket  = "aura-cfg"
+  key     = "install-akf.bash"
+  content = file("install-akf.bash")
+  acl     = "public-read"
+}
+
 resource "github_user_ssh_key" "authorized_keys" {
   for_each = { for key in local.keyfile_params.keys : key.name => key }
 
