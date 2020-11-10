@@ -1,5 +1,6 @@
 provider "digitalocean" {}
 provider "github" {}
+provider "hcloud" {}
 
 locals {
   keyfile_params = {
@@ -40,7 +41,7 @@ resource "digitalocean_spaces_bucket_object" "authorized_keys" {
   acl     = "public-read"
 }
 
-resource "digitalocean_spaces_bucket_object" "authorized_keys" {
+resource "digitalocean_spaces_bucket_object" "install-akf" {
   region  = "ams3"
   bucket  = "aura-cfg"
   key     = "install-akf.bash"
@@ -53,4 +54,11 @@ resource "github_user_ssh_key" "authorized_keys" {
 
   title = "${each.value.name} (${each.value.desc})"
   key   = "${each.value.type} ${each.value.data}"
+}
+
+resource "hcloud_ssh_key" "authorized_keys" {
+  for_each = { for key in local.keyfile_params.keys : key.name => key }
+  name     = "${each.value.name} (${each.value.desc})"
+
+  public_key = "${each.value.type} ${each.value.data}"
 }

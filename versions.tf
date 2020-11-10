@@ -3,6 +3,12 @@ terraform {
     digitalocean = {
       source = "digitalocean/digitalocean"
     }
+    github = {
+      source = "hashicorp/github"
+    }
+    hcloud = {
+      source = "hetznercloud/hcloud"
+    }
   }
   backend "s3" {
     skip_credentials_validation = true
