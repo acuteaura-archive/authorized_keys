@@ -62,3 +62,10 @@ resource "hcloud_ssh_key" "authorized_keys" {
 
   public_key = "${each.value.type} ${each.value.data}"
 }
+
+resource "digitalocean_ssh_key" "authorized_keys" {
+  for_each = { for key in local.keyfile_params.keys : key.name => key }
+
+  name       = "${each.value.name} (${each.value.desc})"
+  public_key = "${each.value.type} ${each.value.data}"
+}
