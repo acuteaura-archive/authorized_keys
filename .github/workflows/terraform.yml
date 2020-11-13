@@ -11,7 +11,7 @@ jobs:
     - name: Terraform Format
       id: fmt
       run: terraform fmt -check
-    - name: Terraform Init
+    - name: Terraform Init & Apply
       id: init
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       run: terraform init && terraform apply -auto-approve
