@@ -12,10 +12,10 @@ locals {
         desc = "Work enabled key, VM"
       },
       {
-        name = "alicia"
+        name = "sunhome"
         type = "ssh-ed25519"
-        data = "AAAAC3NzaC1lZDI1NTE5AAAAIBpjQGOCmPIU8fz64Aj2yuosUwnPsxaey6LcygdxyRdi"
-        desc = "T495, in WSL"
+        data = "AAAAC3NzaC1lZDI1NTE5AAAAIBluWf8q/PNbi3g42E/2N2ZcFH9Yc5hX2E7yFqa1VEkj"
+        desc = "MBP"
       },
       {
         name = "lesbos"
