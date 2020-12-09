@@ -74,6 +74,6 @@ resource "digitalocean_ssh_key" "authorized_keys" {
 resource "vultr_ssh_key" "authorized_keys" {
   for_each = { for key in local.keyfile_params.keys : key.name => key }
     
-  name = "${each.value.name} (${each.value.desc})"
+  name    = "${each.value.name} (${each.value.desc})"
   ssh_key = "${each.value.type} ${each.value.data}"
 }
