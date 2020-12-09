@@ -1,6 +1,7 @@
 provider "digitalocean" {}
 provider "github" {}
 provider "hcloud" {}
+provider "vultr" {}
 
 locals {
   keyfile_params = {
