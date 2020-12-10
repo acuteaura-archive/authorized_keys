@@ -1,6 +1,7 @@
 provider "digitalocean" {}
 provider "github" {}
 provider "hcloud" {}
+provider "vultr" {}
 
 locals {
   keyfile_params = {
@@ -68,4 +69,11 @@ resource "digitalocean_ssh_key" "authorized_keys" {
 
   name       = "${each.value.name} (${each.value.desc})"
   public_key = "${each.value.type} ${each.value.data}"
+}
+
+resource "vultr_ssh_key" "authorized_keys" {
+  for_each = { for key in local.keyfile_params.keys : key.name => key }
+
+  name    = "${each.value.name} (${each.value.desc})"
+  ssh_key = "${each.value.type} ${each.value.data}"
 }

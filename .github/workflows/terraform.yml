@@ -23,3 +23,4 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.SPACES_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.SPACES_SECRET_ACCESS_KEY }}
         HCLOUD_TOKEN: ${{ secrets.HCLOUD_TOKEN }}
+        VULTR_API_KEY: ${{ secrets.VULTR_API_KEY }}
