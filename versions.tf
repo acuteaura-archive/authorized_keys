@@ -9,9 +9,12 @@ terraform {
     hcloud = {
       source = "hetznercloud/hcloud"
     }
+    vultr = {
+      source = "vultr/vultr"
+    }
   }
   backend "gcs" {
-    bucket                      = "aura-cfg"
+    bucket = "aura-cfg"
   }
   required_version = ">= 0.13"
 }
