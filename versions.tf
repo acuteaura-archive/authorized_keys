@@ -13,8 +13,5 @@ terraform {
       source = "vultr/vultr"
     }
   }
-  backend "gcs" {
-    bucket = "aura-cfg"
-  }
   required_version = ">= 0.13"
 }

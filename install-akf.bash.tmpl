@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+
+set -euo pipefail
+
+if [ -z "$HOME" ]; then
+    echo "Unset HOME, bailing."
+    exit 1
+fi
+
+if [ ! -d "$HOME/.ssh" ]; then
+    mkdir -p $HOME/.ssh
+    chmod 700 $HOME/.ssh
+fi
+
+curl --fail --silent ${source_url} > $HOME/.ssh/authorized_keys
+chmod 600 $HOME/.ssh/authorized_keys

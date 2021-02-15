@@ -1,49 +1,34 @@
-provider "digitalocean" {}
-provider "github" {}
-provider "hcloud" {}
-provider "vultr" {}
+
+
+terraform {
+  backend "gcs" {
+    bucket  = "tfstate-authorized-keys"
+  }
+}
 
 locals {
   keyfile_params = {
     keys = [
       {
-        name = "work",
+        name = "tali"
         type = "ssh-rsa"
-        data = "AAAAB3NzaC1yc2EAAAADAQABAAACAQDk5SAIudmHU9MmlCDImi0jP4HpZn9T7wgcXHNW65C4T9v+hLUgZfANRPr6PdqR7vH/F3JJMeKtGstAFmiq6HvXTFm/Eafz5gyN3nv7LVCGA+D7PYCEHHIgpODZZj1QUTkekS0RETyQJyFeBxp0SqlwK1yrzYEBISqHEGv3Vm0uQOwZKemYxjDiC6Xhq6EAn9wR4C7s9we44yaq8PEsp5mrZWR4k2tNMUQzc7eTrtAwWRvYzTHztcNkiaVvRIzyqfMwpyvqExG3sFWu+rqmiELIR6jUGIpkyy1y/16SUmiHaksYqJ7c/B3SVoKLFIHIfDS+pviU+7K/nJC5Y0RoRHVRHHSWY1LWRxZiQtsPP5qScTvgIA/J+PeHWscFZQr1izs87wAQM0xGpJX/Cv3hGjBkd9HIlb5rVYuK+jltiX2hXeqZd9CUKnTWg3aeJ8DRLkw9A0v70Egax2iTTSp8bxTATa4G/yL0MwfZYq91pJa+jCfpoL4BxY0ZR/4u1zm3hvomotfuO81+746OcmyPBZLRJ+GAt6SF2E5hoayV8xY7j/Zfke6rkWEo6tiCGQHK2CkZY8PXr8IoJ9hCBYumAicpbRO1eR+TKkMrocRbUTHx37SQ75L5007NrOVqlj3QOdGC9kg0SbRg6aFh2bufX5rUv4XCzRavD2J4N9hDkiqgvw=="
-        desc = "Work enabled key, VM"
-      },
-      {
-        name = "sunhome"
-        type = "ssh-ed25519"
-        data = "AAAAC3NzaC1lZDI1NTE5AAAAIBluWf8q/PNbi3g42E/2N2ZcFH9Yc5hX2E7yFqa1VEkj"
-        desc = "MBP"
-      },
-      {
-        name = "lesbos"
-        type = "ssh-ed25519"
-        data = "AAAAC3NzaC1lZDI1NTE5AAAAILPLhUqiimAqaX+6SCpZxEC2UosFH4eqQ/yo0Ep+VVXG"
-        desc = "Desktop, in WSL"
-      },
-      {
-        name = "iPhone-WorkingCopy",
-        type = "ssh-rsa"
-        data = "AAAAB3NzaC1yc2EAAAADAQABAAACAQDq/+3fGFDdCRDPC9aGX/kUSycstIRF0y65Dts+zas9cyMOE3+w4v8yhemXcHwXv1viusmWtz6O7a/2B01j4l0d3Nu03MLlR+8nOaX1Vz4fQGJo72yGhrnfzpNSk7T0QHtHX99qnS8PEFJD7wwpRuRtyvfJvhnZ8ox4iG4YUyaalMAJ4cEIocrQtQc/zPiWC0ULQx4SHuFRQClioKJ2hXncrRPm/iVZwRwL+735pOznTdYTZLrcW2HXdz6Cb7cypFNaxkmGT+q3c06Ja+Re2/lq90B8gQ8Bp2naY71oi1jS7LoyurF9yqHQZiQNlObEwcIu+ZaICBZyY6ZYdGPPR2lvKoxCF4S+pihhJTMCvsuBTBlNBd+JbEWSMNrrfJyoS4usBoRR5wTQ+wNhfhJSfU+YDWIgFIxo7irbuqECcUW34nuy9aAuQBa0qTdahS1F9nC9wSzfrkcBe7fGO77YwhRIdCyCAcdSii4SpEkvhQTG9veZxhqVM9t4oZgzjN4cYkkcfHsH91rAT0Gdgq3dwcEYxpLonDfntmBR4fUN35FEbIbfkQZeR1nEbR6eXqdEJT528rF/IfDy2rejuF0F9eHsJ0IJCCla31Ol9ERdW7Do6EMeK8L/Oq7d17IO3i+x+t0SztVgyzCvADn2OS4f8BNaWH/1qy+o1+lnTHcc/n32Yw=="
-        desc = "Working Copy on Aurelia's iPhone"
+        data = "AAAAB3NzaC1yc2EAAAADAQABAAACAQCyAvJXX/H8ZIQl5MijHw/re6vv9eDx66FrmqVDryZXU60eA1xfaZpkcfDlTDd5M4ivM1nLa6kLcpG3p3Oug5ZpIdtp2hQpgsVBp0iZHepx535/wylgDyxgOym6oRgUGwagTMgUFotlyXD9aH6qagD7MaZVQUu6QiDPl3KiFZZBLUeb6wA62R/Oml/Xiw6NgBnIm+lA7TOyHs5v8+q+rzynEmGH8QdUyLbizW1DbbL3//pYALCtoHeCI/fWbcMS3PCBmfxHcdPKcphvX1bZqXmC2hSU1wvpe968cDo7LRKWXkjZYUWcZgvw9nWgfFhtsIJ9ppzum+yW/zjsZmks6mt8U+f+s2fGtdnlbjx2ICRoUsW76+X8KIoQBMwng2zrFBO+NQ/M7E3/C7z1rHmsRXc8Wzj5xiG/ywlMHILNBZQJa+GSOqG4baHf10SmIBnJ6T9UH9o4mdku/Xpuc5V4kMaMNxNvVAREBvMFSpcY7MByhtwT5WaridAje/6nv3ovhjTa/Poa3BtZZI+hwNDGZ9I6u3YdjmbvVw7xZGSUJkbzpKWttCe6Yg7NtQ6VFlh3eOQFbfhed/K7xbq1nauAb5PI3PR616Z2N/CZ6BKdkPUr/vOKdaNU7Q1Chz/822YmgaJjXoBsdbXaYkOhcwbnTT8kY0hKVt5Ly/lBd5k0HiVTSw=="
+        desc = "T495"
       }
     ]
   }
 }
 
-resource "github_user_ssh_key" "authorized_keys" {
+/* resource "github_user_ssh_key" "authorized_keys" {
   for_each = { for key in local.keyfile_params.keys : key.name => key }
 
-  title = "${each.value.name} (${each.value.desc})"
+  title = "${each.value.name} (${each.value.desc}, terraform managed key)"
   key   = "${each.value.type} ${each.value.data}"
 }
 
 resource "hcloud_ssh_key" "authorized_keys" {
   for_each = { for key in local.keyfile_params.keys : key.name => key }
-  name     = "${each.value.name} (${each.value.desc})"
+  name     = "${each.value.name} (${each.value.desc}, terraform managed key)"
 
   public_key = "${each.value.type} ${each.value.data}"
 }
@@ -51,13 +36,43 @@ resource "hcloud_ssh_key" "authorized_keys" {
 resource "digitalocean_ssh_key" "authorized_keys" {
   for_each = { for key in local.keyfile_params.keys : key.name => key }
 
-  name       = "${each.value.name} (${each.value.desc})"
+  name       = "${each.value.name} (${each.value.desc}, terraform managed key)"
   public_key = "${each.value.type} ${each.value.data}"
 }
 
 resource "vultr_ssh_key" "authorized_keys" {
   for_each = { for key in local.keyfile_params.keys : key.name => key }
 
-  name    = "${each.value.name} (${each.value.desc})"
+  name    = "${each.value.name} (${each.value.desc}, terraform managed key)"
   ssh_key = "${each.value.type} ${each.value.data}"
+} */
+
+resource "google_storage_bucket_object" "akf_data" {
+  name   = "authorized_keys"
+  content = templatefile("./akf.tmpl", local.keyfile_params)
+  bucket = "tfstate-authorized-keys"
+}
+
+resource "google_storage_object_acl" "akf_data-acl" {
+  bucket = "tfstate-authorized-keys"
+  object = google_storage_bucket_object.akf_data.output_name
+
+  predefined_acl = "publicRead"
+}
+
+resource "google_storage_bucket_object" "akf_installscript" {
+  name   = "install-akf.bash"
+  content = templatefile("install-akf.bash.tmpl", {source_url = google_storage_bucket_object.akf_data.media_link})
+  bucket = "tfstate-authorized-keys"
+}
+
+resource "google_storage_object_acl" "akf_installscript-acl" {
+  bucket = "tfstate-authorized-keys"
+  object = google_storage_bucket_object.akf_installscript.output_name
+
+  predefined_acl = "publicRead"
+}
+
+output "akf_install_link" {
+  value = google_storage_bucket_object.akf_installscript.media_link
 }

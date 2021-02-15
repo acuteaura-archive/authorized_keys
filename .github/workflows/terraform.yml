@@ -18,7 +18,6 @@ jobs:
       run: terraform fmt -check
     - name: Terraform Init & Apply
       id: init
-      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       run: terraform init && terraform apply -auto-approve
       env:
         GITHUB_TOKEN: ${{ secrets.GH_CUSTOM_TOKEN }}
