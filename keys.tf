@@ -2,7 +2,7 @@
 
 terraform {
   backend "gcs" {
-    bucket  = "tfstate-authorized-keys"
+    bucket = "tfstate-authorized-keys"
   }
 }
 
@@ -24,7 +24,7 @@ locals {
 
   title = "${each.value.name} (${each.value.desc}, terraform managed key)"
   key   = "${each.value.type} ${each.value.data}"
-}
+} */
 
 resource "hcloud_ssh_key" "authorized_keys" {
   for_each = { for key in local.keyfile_params.keys : key.name => key }
@@ -33,7 +33,7 @@ resource "hcloud_ssh_key" "authorized_keys" {
   public_key = "${each.value.type} ${each.value.data}"
 }
 
-resource "digitalocean_ssh_key" "authorized_keys" {
+/* resource "digitalocean_ssh_key" "authorized_keys" {
   for_each = { for key in local.keyfile_params.keys : key.name => key }
 
   name       = "${each.value.name} (${each.value.desc}, terraform managed key)"
@@ -48,9 +48,9 @@ resource "vultr_ssh_key" "authorized_keys" {
 } */
 
 resource "google_storage_bucket_object" "akf_data" {
-  name   = "authorized_keys"
+  name    = "authorized_keys"
   content = templatefile("./akf.tmpl", local.keyfile_params)
-  bucket = "tfstate-authorized-keys"
+  bucket  = "tfstate-authorized-keys"
 }
 
 resource "google_storage_object_acl" "akf_data-acl" {
@@ -61,9 +61,9 @@ resource "google_storage_object_acl" "akf_data-acl" {
 }
 
 resource "google_storage_bucket_object" "akf_installscript" {
-  name   = "install-akf.bash"
-  content = templatefile("install-akf.bash.tmpl", {source_url = google_storage_bucket_object.akf_data.media_link})
-  bucket = "tfstate-authorized-keys"
+  name    = "install-akf.bash"
+  content = templatefile("install-akf.bash.tmpl", { source_url = google_storage_bucket_object.akf_data.media_link })
+  bucket  = "tfstate-authorized-keys"
 }
 
 resource "google_storage_object_acl" "akf_installscript-acl" {
