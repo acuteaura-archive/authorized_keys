@@ -19,12 +19,12 @@ locals {
   }
 }
 
-/* resource "github_user_ssh_key" "authorized_keys" {
+resource "github_user_ssh_key" "authorized_keys" {
   for_each = { for key in local.keyfile_params.keys : key.name => key }
 
   title = "${each.value.name} (${each.value.desc}, terraform managed key)"
   key   = "${each.value.type} ${each.value.data}"
-} */
+}
 
 resource "hcloud_ssh_key" "authorized_keys" {
   for_each = { for key in local.keyfile_params.keys : key.name => key }
