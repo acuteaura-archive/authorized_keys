@@ -22,7 +22,5 @@ jobs:
       run: terraform init && terraform apply -auto-approve
       env:
         GITHUB_TOKEN: ${{ secrets.GH_CUSTOM_TOKEN }}
-        DIGITALOCEAN_TOKEN: ${{ secrets.DIGITALOCEAN_TOKEN }}
         HCLOUD_TOKEN: ${{ secrets.HCLOUD_TOKEN }}
-        VULTR_API_KEY: ${{ secrets.VULTR_API_KEY }}
         GOOGLE_APPLICATION_CREDENTIALS: /tmp/google-application-credentials

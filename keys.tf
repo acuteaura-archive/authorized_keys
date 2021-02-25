@@ -31,20 +31,6 @@ resource "hcloud_ssh_key" "authorized_keys" {
   public_key = "${each.value.type} ${each.value.data}"
 }
 
-/* resource "digitalocean_ssh_key" "authorized_keys" {
-  for_each = { for key in local.keyfile_params.keys : key.name => key }
-
-  name       = "${each.value.name} (${each.value.desc}, terraform managed key)"
-  public_key = "${each.value.type} ${each.value.data}"
-}
-
-resource "vultr_ssh_key" "authorized_keys" {
-  for_each = { for key in local.keyfile_params.keys : key.name => key }
-
-  name    = "${each.value.name} (${each.value.desc}, terraform managed key)"
-  ssh_key = "${each.value.type} ${each.value.data}"
-} */
-
 resource "google_storage_bucket_object" "akf_data" {
   name    = "authorized_keys"
   content = templatefile("./akf.tmpl", local.keyfile_params)
