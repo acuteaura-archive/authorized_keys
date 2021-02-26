@@ -66,3 +66,7 @@ resource "google_storage_object_acl" "akf_installscript-acl" {
 output "akf_install_link" {
   value = google_storage_bucket_object.akf_installscript.media_link
 }
+
+output "akf_link" {
+  value = google_storage_bucket_object.akf_data.media_link
+}
