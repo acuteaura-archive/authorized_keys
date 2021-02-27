@@ -4,3 +4,4 @@
 *.tfstate.backup
 /.envrc
 /serviceaccount.json
+/.idea
