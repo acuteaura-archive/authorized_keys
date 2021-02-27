@@ -8,6 +8,9 @@ image_resource:
     tag: "0.14.7"
 run:
   dir: authorized_keys_repo
-  path: terraform fmt -check && terraform init && terraform apply -auto-approve
+  path: bash
+  args:
+  - "-c"
+  - "terraform fmt -check && terraform init && terraform apply -auto-approve"
 outputs:
   - name: cassiecluster
