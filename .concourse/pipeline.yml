@@ -10,6 +10,7 @@ jobs:
     serial: yes
     plan:
     - get: authorized_keys_repo
+      passed: [pipeline]
       trigger: yes
     - task: terraform
       file: authorized_keys_repo/.concourse/terraform.yml
