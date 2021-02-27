@@ -1,0 +1,12 @@
+inputs:
+  - name: authorized_keys_repo
+platform: linux
+image_resource:
+  type: registry-image
+  source:
+    repository: docker.io/hashicorp/terraform:0.14.7
+run:
+  dir: authorized_keys_repo
+  path: terraform fmt -check && terraform init && terraform apply -auto-approve
+outputs:
+  - name: cassiecluster
