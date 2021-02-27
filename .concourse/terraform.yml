@@ -8,7 +8,7 @@ image_resource:
     tag: "0.14.7"
 run:
   dir: authorized_keys_repo
-  path: bash
+  path: ash
   args:
   - "-c"
   - "terraform fmt -check && terraform init && terraform apply -auto-approve"
