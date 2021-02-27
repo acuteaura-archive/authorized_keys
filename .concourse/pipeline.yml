@@ -19,4 +19,4 @@ jobs:
       - get: authorized_keys_repo
         trigger: yes
       - set_pipeline: self
-        file: .concourse/pipeline.yml
+        file: authorized_keys_repo/.concourse/pipeline.yml
