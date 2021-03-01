@@ -14,12 +14,7 @@ jobs:
       trigger: yes
     - task: google-credentials
       file: authorized_keys_repo/.concourse/google-credentials.yml
-      outputs:
-       - name: google_credentials
     - task: terraform
-      inputs:
-       - name: authorized_keys_repo
-       - name: google_credentials
       file: authorized_keys_repo/.concourse/terraform.yml
   - name: pipeline
     serial: yes
