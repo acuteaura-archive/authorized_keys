@@ -2,7 +2,7 @@ inputs:
   - name: authorized_keys_repo
   - name: google_credentials
 params:
-  GOOGLE_APPLICATION_CREDENTIALS="../google_credentials/serviceaccount.json"
+  GOOGLE_APPLICATION_CREDENTIALS: "../google_credentials/serviceaccount.json"
 platform: linux
 image_resource:
   type: registry-image
