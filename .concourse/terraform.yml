@@ -3,6 +3,8 @@ inputs:
   - name: google_credentials
 params:
   GOOGLE_APPLICATION_CREDENTIALS: "../google_credentials/serviceaccount.json"
+  HCLOUD_TOKEN: "((hcloud.token))"
+  GITHUB_TOKEN: "((github.token))"
 platform: linux
 image_resource:
   type: registry-image
