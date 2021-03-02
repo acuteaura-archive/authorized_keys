@@ -18,6 +18,12 @@ locals {
         type = "ssh-ed25519"
         data = "AAAAC3NzaC1lZDI1NTE5AAAAILPLhUqiimAqaX+6SCpZxEC2UosFH4eqQ/yo0Ep+VVXG"
         desc = "WSL Desktop"
+      },
+      {
+        name = "wsl-work",
+        type = "ssh-rsa"
+        data = "AAAAB3NzaC1yc2EAAAADAQABAAACAQC6e0oYWts4eegKnz1470HSVEEwceAXki0Eh693vqFw3C6eGjyK7k0V4XQ/SLmpHTAt6sHpHtmXU+PfDEnct5XfpehSTJwomhRIcmn01T6I0dw1KOBFhP9i+pRoyI9mVdG1Otl0yPrfhUEiABNAvEK9WTnt1CN/hH0O5jPv5qderZtujfbybWc7dJRUeEoendIBuEoSnEaTpbHhBzObohF5eW7kmJYyVDuyN0N++L98pV3pWWZS6F5RIulT8nfHp8JqsWdCu7HpoiDI6obHUO3u8acZmLA9W0/phEnmWDrTndF8JwMqHJFdxRre2qm52hQHma+RwgpLhDaWGRvcR8xaLGl8J5EpNXCZdE+dNTRPb2muXOfN9M3sjHORLn9ywRKeJmD11wn/o1X8is+c/xOZKh9QTK+2bDM8BD4eMBRpJL3CdIWGuAN/I14mEjObfgzH8tfQUt/XCmQfv28RU5qqbMWeoERRlzOiy1jjSIY8MbWgBceGcWgiP92IEPTA5RvI/ySepjn7yFh58QzPwIffHqPHeSZfo8eS+YZa1KQWQ1d8NdGoHqPjMvIEK2jkMaSErrCBzERPkyksLfECG/gFDNnNMLt1hcw1qVA7JF7i4syhLsjFQQOLT8vpzQoa3hSek94CwKNpyMYm2LRiiGE7sblZPQ/dVuiaI5teRwQDxw=="
+        desc = "WSL work"  
       }
     ]
   }
