@@ -24,6 +24,12 @@ locals {
         type = "ssh-rsa"
         data = "AAAAB3NzaC1yc2EAAAADAQABAAACAQC6e0oYWts4eegKnz1470HSVEEwceAXki0Eh693vqFw3C6eGjyK7k0V4XQ/SLmpHTAt6sHpHtmXU+PfDEnct5XfpehSTJwomhRIcmn01T6I0dw1KOBFhP9i+pRoyI9mVdG1Otl0yPrfhUEiABNAvEK9WTnt1CN/hH0O5jPv5qderZtujfbybWc7dJRUeEoendIBuEoSnEaTpbHhBzObohF5eW7kmJYyVDuyN0N++L98pV3pWWZS6F5RIulT8nfHp8JqsWdCu7HpoiDI6obHUO3u8acZmLA9W0/phEnmWDrTndF8JwMqHJFdxRre2qm52hQHma+RwgpLhDaWGRvcR8xaLGl8J5EpNXCZdE+dNTRPb2muXOfN9M3sjHORLn9ywRKeJmD11wn/o1X8is+c/xOZKh9QTK+2bDM8BD4eMBRpJL3CdIWGuAN/I14mEjObfgzH8tfQUt/XCmQfv28RU5qqbMWeoERRlzOiy1jjSIY8MbWgBceGcWgiP92IEPTA5RvI/ySepjn7yFh58QzPwIffHqPHeSZfo8eS+YZa1KQWQ1d8NdGoHqPjMvIEK2jkMaSErrCBzERPkyksLfECG/gFDNnNMLt1hcw1qVA7JF7i4syhLsjFQQOLT8vpzQoa3hSek94CwKNpyMYm2LRiiGE7sblZPQ/dVuiaI5teRwQDxw=="
         desc = "WSL work"
+      },
+      {
+        name = "work",
+        type = "ssh-rsa"
+        data = "AAAAB3NzaC1yc2EAAAADAQABAAACAQC88Zuaib1xuYJFl7KwT2qBmviWhFAnD4wtG9r9vDvvPicqpE7qQc43LVtsTpI/HoDTAUOwLh5lHNjCLF5t9sye98IyWlaTq7C4uo8kp8Zeg6L8mInfAU7IFbvr/QegaMmDVamlGhjvtxXkQRNU/F1GAgmvxLX1RPAoZnBRBg4x8rNlsf64Kh5w0ATsdvwTmskn4t7l6s/NxUFOa+ETxp75eS6GLNOnpsZrRgRjZalgDUg0S9FIedjjrmVoTATaX49DroyneZGzxmqqUX+Ud/zm69HU8iewn/6gCKJ4W6H3qNG547y10mx2THwVSItW5DS8Deay0XMi5gzcQQBis3DHWirFQN7EtIva7/ignFbQoEqcwLDnuPuHbTBDXSBhYXAHgretpQ24QCwSNq06OTKEpxyPjJmKqijyVC6o/1NolMzL/PHYNNZnHc/YkTmu9fWGYg7XmbYH16hCpZm36PZXfA7Q46ZtyP80NaK/Jhi8DqETJ7kCb/XUtN1rSkC0qbu8AhmcpPcrhmpdlzddQdaRwI4lL9Xrs3UUN5iG28ZzU7Exl5/3a18sc0iOInqCf+exYtstylLlGnm1NiFBuqUJiERoPPtakeVX4msAsbONXtf66ORKYjgBDIQzPg0JDFoyfneiXHlll4WQT651mcw0fj3YDcPKvL60v8Wp9Kxsaw=="
+        desc = "work"
       }
     ]
   }
