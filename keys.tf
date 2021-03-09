@@ -32,10 +32,10 @@ locals {
         desc = "work"
       },
       {
-        name = "YubiKey PIV #15420686"
+        name = "YubiKey"
         type = "ssh-rsa"
-        data = "AAAAB3NzaC1yc2EAAAADAQABAAABAQDJzNIRVXlSigmxxo05g/XHS4S03jE6cNLs3KoXiwtOKvQqAhDcrAia0Qy4BQvebrEIC3Dd0fUPeMij0zp6b7ZXwQ+2lSCxrwpAN3igC5JnSVwtydSvNFWMRjLYJ0NkltJRveKpxrb8OQXL1HusQSA9G6K0D5Usvd3MJZaiVoQj0MjZlAgOKVdYlO72lNtn5WRrCl1dM2fkRvb+1AsK58b8KY6k8v+jNohcGDCfAbk5tT+bsD5IMysk4o7Jq//MRunc+ttsytc0pll9SMxXgR5Hh3rc9ZKFnultL0TVSPy+6L3NVQnd/LDG5zneakb8K26sPb1SDdkonTmmP64t47hh"
-        desc = "YubiKey 5c NFC PIV 5a"
+        data = "AAAAB3NzaC1yc2EAAAADAQABAAABAQC+hHxprcAsMJxvmVNKGfJA9d+p+mROQlAQMlX7M8XddqL9gUcTQB6FyI/hsggHgjjburwWElHzggevZdKg2dOMX2gm+VFvkXgyP3vueNx/g5sijuR+FRvctSUGwVYh5g8j5Pkhw6cPRRESIxkepvGNEPsirdYuwRg7txuPO6rrufmD0c/i8RfPzQEPr2XO8TpU5yakEHE3MozgxuZTp/cCO+WoDEaqtM1i/8qhM/Z2tGQFWd0oO1DLDLfL3UrsHCeiM5GYPxTvnAp6HabJRQLjdzRAdhFT8768bUBqD9AgzANK51bcChB2/wccK6iHdm9hU0Idoi21UhFB+ZS823T/"
+        desc = "5c NFC PIV 9a"
       }
     ]
   }
