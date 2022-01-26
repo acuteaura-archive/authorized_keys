@@ -13,10 +13,16 @@ locals {
   keyfile_params = {
     keys = [
       {
-        name = "aurelia"
+        name = "hephaestos"
         type = "ssh-ed25519"
-        data = "AAAAC3NzaC1lZDI1NTE5AAAAIIh2UTSCg9eV7rHYampoohtqGcjetZxbaWWPde67NzGS"
-        desc = "Generic Key"
+        data = "AAAAC3NzaC1lZDI1NTE5AAAAICz4zOlVpBlgzo/RNBHb3aQ8Rj27G7E5ppc7+TD3ojPq"
+        desc = "work machine vm"
+      },
+      {
+        name = "polaris"
+        type = "ssh-ed25519"
+        data = "AAAAC3NzaC1lZDI1NTE5AAAAIPYn0pQy2oQJXQMLnba9KOjD6O+xKvG5DulbTQA8qz1k"
+        desc = "private vm"
       }
     ]
   }
